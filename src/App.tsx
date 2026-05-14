@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 import PriceListPage from './pages/PriceListPage';
 import NotesPage from './pages/NotesPage';
+import PickupPage from './pages/PickupPage';
 import { CartProvider } from './context/CartContext';
 import CartModal from './components/CartModal';
 import FloatingCart from './components/FloatingCart';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/pricelist" element={<PriceListPage />} />
           <Route path="/notes" element={<NotesPage />} />
+          <Route path="/pickup" element={<PickupPage />} />
         </Routes>
         <Footer />
         <CartModal />

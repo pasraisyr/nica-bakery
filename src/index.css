@@ -463,7 +463,7 @@ footer {
   .hero-buttons {
     flex-direction: column;
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
     margin: 0 auto;
     gap: 0.8rem !important;
   }

@@ -125,5 +125,21 @@
     "price": 70.00,
     "category": "Birthday Cake Custom",
     "image": "/product/IBC7INCH_TOPPER_WORDING_FRUITS.png"
+  },
+  {
+    "id": 16,
+    "name": "Orange Buttercake",
+    "description": "Zesty and moist orange flavored buttercake.",
+    "price": 65.00,
+    "category": "Buttercake",
+    "image": "/product/classic_buttercake_7inch.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Pandan Buttercake",
+    "description": "Fragrant and traditional pandan flavored buttercake.",
+    "price": 65.00,
+    "category": "Buttercake",
+    "image": "/product/classic_buttercake_7inch.jpeg"
   }
 ]

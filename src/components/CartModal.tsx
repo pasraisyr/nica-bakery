@@ -19,7 +19,7 @@ const CartModal = () => {
   if (!isCartOpen) return null;
 
   const handleWhatsAppOrder = () => {
-    const phoneNumber = '601164435046';
+    const phoneNumber = '60163846320';
     let message = `*BREAD ORDER SUMMARY*\n------------------\n`;
     
     cart.forEach((item, index) => {
@@ -29,7 +29,6 @@ const CartModal = () => {
 
     message += `------------------\n*TOTAL: RM${totalPrice.toFixed(2)}*\n\n`;
     message += `Items: ${totalItems}\n`;
-    message += `*Pre-order: Delivery Isnin & Khamis*\n\n`;
     message += `_Please process my order. Thank you!_`;
 
     const encodedMessage = encodeURIComponent(message);
@@ -46,10 +45,6 @@ const CartModal = () => {
           </button>
         </div>
 
-        <div className="preorder-notice" style={{ background: '#fff9db', padding: '1rem', borderBottom: '1px solid #f9e154', color: '#856404', fontSize: '0.9rem', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <span style={{ fontSize: '1.2rem' }}>⚠️</span>
-          Item adalah pre-order dan akan dapat setiap Isnin & Khamis.
-        </div>
 
         {cart.length === 0 ? (
           <div className="empty-cart">

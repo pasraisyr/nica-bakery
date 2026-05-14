@@ -11,17 +11,17 @@ const Footer = () => {
         </div>
         
         <div className="social-links">
-          <a href="https://instagram.com/Nicaaakhall" target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram: Nicaaakhall">
+          <a href="https://instagram.com/nicaaakhall" target="_blank" rel="noopener noreferrer" className="social-link" title="Instagram: @nicaaakhall">
             <SiInstagram size={20} />
-            <span>Nicaaakhall</span>
+            <span>@nicaaakhall</span>
           </a>
-          <a href="https://tiktok.com/@Nicaaajml" target="_blank" rel="noopener noreferrer" className="social-link" title="TikTok: Nicaaajml">
+          <a href="https://tiktok.com/@nicaaajml" target="_blank" rel="noopener noreferrer" className="social-link" title="TikTok: @nicaaajml">
             <SiTiktok size={20} />
-            <span>Nicaaajml</span>
+            <span>@nicaaajml</span>
           </a>
-          <a href="https://threads.net/@Nicaaakhall" target="_blank" rel="noopener noreferrer" className="social-link" title="Threads: Nicaaakhall">
+          <a href="https://threads.net/@nicaaakhall" target="_blank" rel="noopener noreferrer" className="social-link" title="Threads: @nicaaakhall">
             <SiThreads size={20} />
-            <span>Nicaaakhall</span>
+            <span>@nicaaakhall</span>
           </a>
         </div>
 

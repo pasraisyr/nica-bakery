@@ -20,7 +20,7 @@ const CartModal = () => {
 
   const handleWhatsAppOrder = () => {
     const phoneNumber = '60163846320';
-    let message = `*BREAD ORDER SUMMARY*\n------------------\n`;
+    let message = `*CAKE ORDER SUMMARY*\n------------------\n`;
     
     cart.forEach((item, index) => {
       const flavorText = item.selectedOption ? ` (${item.selectedOption})` : '';

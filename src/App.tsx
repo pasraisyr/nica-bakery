@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
@@ -12,20 +13,22 @@ import './App.css';
 
 function App() {
   return (
-    <CartProvider>
-      <Router>
-        <Header />
-        <FloatingCart />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/pricelist" element={<PriceListPage />} />
-          <Route path="/notes" element={<NotesPage />} />
-          <Route path="/pickup" element={<PickupPage />} />
-        </Routes>
-        <Footer />
-        <CartModal />
-      </Router>
-    </CartProvider>
+    <HelmetProvider>
+      <CartProvider>
+        <Router>
+          <Header />
+          <FloatingCart />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/pricelist" element={<PriceListPage />} />
+            <Route path="/notes" element={<NotesPage />} />
+            <Route path="/pickup" element={<PickupPage />} />
+          </Routes>
+          <Footer />
+          <CartModal />
+        </Router>
+      </CartProvider>
+    </HelmetProvider>
   );
 }
 

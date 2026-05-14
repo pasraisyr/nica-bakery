@@ -3,6 +3,7 @@ import products from '../data/products.json';
 import { BiCartAdd } from 'react-icons/bi';
 import { Cake } from 'lucide-react';
 import SelectionModal from '../components/SelectionModal';
+import SEO from '../components/SEO';
 
 const getImageUrl = (imagePath: string) => {
   const filename = imagePath.split('/').pop();
@@ -85,6 +86,7 @@ const PriceListPage = () => {
 
   return (
     <div className="price-list-page">
+      <SEO title="Our Menu & Price List" description="Browse our full range of burnt cheesecakes, buttercakes, and brownies. Premium flavors starting from RM18." />
       <div className="container">
         <div className="section-title">
           <h2>Our Price List</h2>

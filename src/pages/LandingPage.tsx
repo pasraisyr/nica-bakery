@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 
 const LandingPage = () => {
   return (
     <main>
+      <SEO title="Premium Homemade Cakes & Brownies" description="Best burnt cheesecakes, buttercakes, and brownies in Shah Alam. Handcrafted with love by Nisajamal. Order your sweet cravings now!" />
       <section className="hero">
         <div className="container">
           <div className="hero-content">

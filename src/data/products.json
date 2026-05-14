@@ -132,7 +132,7 @@
     "description": "Zesty and moist orange flavored buttercake.",
     "price": 65.00,
     "category": "Buttercake",
-    "image": "/product/classic_buttercake_7inch.jpeg"
+    "image": "/product/orange_buttercake.jpeg"
   },
   {
     "id": 17,
@@ -140,6 +140,6 @@
     "description": "Fragrant and traditional pandan flavored buttercake.",
     "price": 65.00,
     "category": "Buttercake",
-    "image": "/product/classic_buttercake_7inch.jpeg"
+    "image": "/product/pandan_buttercake.jpeg"
   }
 ]

@@ -1,0 +1,4 @@
+/* App specific styles can go here */
+.active {
+  color: var(--primary) !important;
+}

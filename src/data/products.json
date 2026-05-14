@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Iceberg Burnt Cheesecake 4”",
+    "description": "Creamy and rich mini burnt cheesecake, perfect for a personal treat.",
+    "price": 18.00,
+    "category": "Burnt Cheesecake",
+    "image": "/product/mini_iceberg_burnt_cheeseake_4inch.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Iceberg Burnt Cheesecake (Loaf)",
+    "description": "Our signature iceberg burnt cheesecake in a convenient loaf shape.",
+    "price": 35.00,
+    "category": "Burnt Cheesecake",
+    "image": "/product/Iceberg_Burnt_Cheesecake_Loaf.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Iceberg Burnt Cheesecake 6”",
+    "description": "A 6-inch creamy burnt cheesecake with a perfect caramelized top.",
+    "price": 45.00,
+    "category": "Burnt Cheesecake",
+    "image": "/product/Iceberg_Burnt_Cheesecake_6.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Iceberg Burnt Cheesecake 7”",
+    "description": "Large 7-inch iceberg burnt cheesecake, ideal for sharing.",
+    "price": 55.00,
+    "category": "Burnt Cheesecake",
+    "image": "/product/Iceberg _Burnt _Cheesecake _7.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Classic Buttercake (Loaf)",
+    "description": "Moist and buttery loaf cake. Add-on flavors available (+RM5): Red Velvet, Orange, Chocoffee, Pandan.",
+    "price": 30.00,
+    "category": "Buttercake",
+    "image": "/product/classic_buttercake_loaf.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Classic Buttercake 7”",
+    "description": "Timeless classic buttercake, rich in flavor and perfectly baked.",
+    "price": 58.00,
+    "category": "Buttercake",
+    "image": "/product/classic_buttercake_7inch.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Red Velvet Buttercake 7”",
+    "description": "Stunning red velvet buttercake with a delicate cocoa flavor.",
+    "price": 65.00,
+    "category": "Buttercake",
+    "image": "/product/red_velvet_buttercake_7inch.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Marble Buttercake (Belgian) 7”",
+    "description": "Premium marble cake featuring rich Belgian chocolate.",
+    "price": 65.00,
+    "category": "Buttercake",
+    "image": "/product/marble_buttercake_belgian7inch.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Brownies 8” (Plain)",
+    "description": "Fudgy and chocolatey 8-inch plain brownies.",
+    "price": 38.00,
+    "category": "Brownies",
+    "image": "/product/brownies_plain_8inch.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Brownies 8” flavored - Kitkat Hazelnut",
+    "description": "8-inch brownies topped with Kitkat and hazelnut for extra crunch.",
+    "price": 43.00,
+    "category": "Brownies",
+    "image": "/product/Brownies_8inchflavored.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Brownies 8” Flavored - Oreo Lotus",
+    "description": "8-inch brownies flavored with Oreo and Lotus Biscoff.",
+    "price": 43.00,
+    "category": "Brownies",
+    "image": "/product/Brownies_8Flavored_Oreo.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Burnt cheesecake + fruits + topper",
+    "description": "Customized burnt cheesecake with fresh fruits and a topper.",
+    "price": 55.00,
+    "category": "Birthday Cake Custom",
+    "image": "/product/Burntcheesecake_fruits_topper.png"
+  },
+  {
+    "id": 13,
+    "name": "IBC + Topper + Wording",
+    "description": "Iceberg Burnt Cheesecake with a topper and personalized wording.",
+    "price": 60.00,
+    "category": "Birthday Cake Custom",
+    "image": "/product/IBC_TOPPER_WORDING.png"
+  },
+  {
+    "id": 14,
+    "name": "IBC + Topper + Wording + Fruits",
+    "description": "Iceberg Burnt Cheesecake with topper, wording, and fresh fruits.",
+    "price": 63.00,
+    "category": "Birthday Cake Custom",
+    "image": "/product/IBC_TOPPER_WORDING_FRUITS.png"
+  },
+  {
+    "id": 15,
+    "name": "IBC 7” + Topper + Wording + Fruits",
+    "description": "Premium 7-inch Iceberg Burnt Cheesecake with full custom decoration.",
+    "price": 70.00,
+    "category": "Birthday Cake Custom",
+    "image": "/product/IBC7INCH_TOPPER_WORDING_FRUITS.png"
+  }
+]

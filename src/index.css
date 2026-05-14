@@ -457,7 +457,33 @@ footer {
   }
 
   .hero-content {
-    margin-top: -20px; /* Subtle adjustment to center better visually */
+    margin-top: -20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    gap: 0.8rem !important;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .notes-card {
+    padding: 1.5rem !important;
+  }
+
+  .notes-header h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .modal-content {
+    padding: 1.5rem !important;
   }
 
   .hero-content h1 {
@@ -980,8 +1006,10 @@ footer {
   background: white;
   width: 100%;
   max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 32px;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
   animation: modalScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);

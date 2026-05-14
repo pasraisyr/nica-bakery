@@ -12,9 +12,14 @@ const LandingPage = () => {
               "Sweets for your soul, treats for your tummy." <br></br>
               Burnt cheesecake, buttercakes, and brownies made fresh with love 🍰
             </p>
-            <Link to="/pricelist" className="btn">
-              View Price List
-            </Link>
+            <div className="hero-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+              <Link to="/pricelist" className="btn">
+                View Price List
+              </Link>
+              <Link to="/notes" className="btn btn-outline" style={{ background: 'transparent', border: '2px solid white', color: 'white' }}>
+                Important Notes
+              </Link>
+            </div>
           </div>
         </div>
       </section>

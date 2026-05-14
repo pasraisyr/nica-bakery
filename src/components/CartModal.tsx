@@ -23,7 +23,8 @@ const CartModal = () => {
     let message = `*BREAD ORDER SUMMARY*\n------------------\n`;
     
     cart.forEach((item, index) => {
-      message += `${index + 1}. ${item.name}\n   Qty: ${item.quantity} x RM${item.price.toFixed(2)} = *RM${(item.quantity * item.price).toFixed(2)}*\n\n`;
+      const flavorText = item.selectedOption ? ` (${item.selectedOption})` : '';
+      message += `${index + 1}. ${item.name}${flavorText}\n   Qty: ${item.quantity} x RM${item.price.toFixed(2)} = *RM${(item.quantity * item.price).toFixed(2)}*\n\n`;
     });
 
     message += `------------------\n*TOTAL: RM${totalPrice.toFixed(2)}*\n\n`;
@@ -62,11 +63,16 @@ const CartModal = () => {
                 <div key={item.id} className="cart-item">
                   <img src={getImageUrl(item.image)} alt={item.name} />
                   <div className="item-details">
-                    <h4>{item.name}</h4>
-                    <p>RM{item.price.toFixed(2)}</p>
-                    <div className="quantity-controls">
+                    <h4 style={{ fontSize: '1rem', marginBottom: '4px' }}>{item.name}</h4>
+                    {item.selectedOption && (
+                      <div style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: '600', marginBottom: '8px' }}>
+                        Flavor: {item.selectedOption}
+                      </div>
+                    )}
+                    <p style={{ fontWeight: '700', color: '#333' }}>RM{item.price.toFixed(2)}</p>
+                    <div className="quantity-controls" style={{ marginTop: '12px' }}>
                       <button onClick={() => updateQuantity(item.id, item.quantity - 1)}><BiMinus size={16} /></button>
-                      <span>{item.quantity}</span>
+                      <span style={{ fontWeight: '700' }}>{item.quantity}</span>
                       <button onClick={() => updateQuantity(item.id, item.quantity + 1)}><BiPlus size={16} /></button>
                     </div>
                   </div>

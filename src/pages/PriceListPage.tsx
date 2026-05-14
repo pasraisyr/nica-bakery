@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import products from '../data/products.json';
-import { useCart } from '../context/CartContext';
-import { BiPlus, BiMinus } from 'react-icons/bi';
+import { BiCartAdd } from 'react-icons/bi';
 import { Cake } from 'lucide-react';
+import SelectionModal from '../components/SelectionModal';
 
 const getImageUrl = (imagePath: string) => {
   const filename = imagePath.split('/').pop();
@@ -10,84 +10,67 @@ const getImageUrl = (imagePath: string) => {
 };
 
 const ProductCard = ({ product }: { product: any }) => {
-  const { cart, addToCart, updateQuantity } = useCart();
-  
-  // Find if this product is already in the cart
-  const cartItem = cart.find(item => item.id === product.id);
-  const quantity = cartItem ? cartItem.quantity : 0;
-
-  const handlePlus = () => {
-    if (quantity === 0) {
-      addToCart(product, 1);
-    } else {
-      updateQuantity(product.id, quantity + 1);
-    }
-  };
-
-  const handleMinus = () => {
-    if (quantity > 0) {
-      updateQuantity(product.id, quantity - 1);
-    }
-  };
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="product-card">
-      <div className="product-image" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--primary-light)', color: '#999' }}>
-        {product.image && !imageError ? (
-          <img 
-            src={getImageUrl(product.image)} 
-            alt={product.name} 
-            onError={() => setImageError(true)} 
-          />
-        ) : (
-          <div style={{ textAlign: 'center', opacity: 0.6 }}>
-            <Cake size={48} color="var(--primary)" />
-            <div style={{ fontSize: '0.8rem', marginTop: '0.8rem', fontWeight: '700', color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>No Photo</div>
-          </div>
-        )}
-      </div>
-      <div className="product-info">
-        <div className="product-category">{product.category}</div>
-        <h3 className="product-name">{product.name}</h3>
-        
-        <div className="product-footer-top">
-          <div className="product-price">
-            <span>RM</span>{product.price.toFixed(2)}
-          </div>
-          <div className="quantity-selector" style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            gap: '0.8rem', 
-            background: 'var(--primary-light)', 
-            padding: '0.5rem 1rem', 
-            borderRadius: '50px',
-            transition: 'all 0.3s ease'
-          }}>
+    <>
+      <div className="product-card" onClick={() => setIsModalOpen(true)} style={{ cursor: 'pointer' }}>
+        <div className="product-image" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--primary-light)', color: '#999' }}>
+          {product.image && !imageError ? (
+            <img 
+              src={getImageUrl(product.image)} 
+              alt={product.name} 
+              onError={() => setImageError(true)} 
+            />
+          ) : (
+            <div style={{ textAlign: 'center', opacity: 0.6 }}>
+              <Cake size={48} color="var(--primary)" />
+              <div style={{ fontSize: '0.8rem', marginTop: '0.8rem', fontWeight: '700', color: 'var(--primary)', letterSpacing: '1px', textTransform: 'uppercase' }}>No Photo</div>
+            </div>
+          )}
+        </div>
+        <div className="product-info">
+          <div className="product-category">{product.category}</div>
+          <h3 className="product-name">{product.name}</h3>
+          
+          <div className="product-footer-top">
+            <div className="product-price">
+              <span>RM</span>{product.price.toFixed(2)}
+              {product.options && <span style={{ fontSize: '0.8rem', marginLeft: '4px', opacity: 0.7 }}>+ options</span>}
+            </div>
+            
             <button 
-              onClick={handleMinus}
-              style={{ border: 'none', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: quantity > 0 ? 'var(--primary)' : '#ccc' }}
-              disabled={quantity === 0}
+              className="btn btn-select-options"
+              onClick={(e) => { e.stopPropagation(); setIsModalOpen(true); }}
+              style={{ 
+                padding: '0.6rem 1.2rem', 
+                borderRadius: '50px', 
+                fontSize: '0.9rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'var(--primary)',
+                color: 'white',
+                border: 'none',
+                cursor: 'pointer',
+                fontWeight: '700'
+              }}
             >
-              <BiMinus size={20} />
-            </button>
-            <span style={{ 
-              fontWeight: '700', 
-              minWidth: '20px', 
-              textAlign: 'center',
-              color: quantity > 0 ? 'var(--primary)' : '#999'
-            }}>{quantity}</span>
-            <button 
-              onClick={handlePlus}
-              style={{ border: 'none', background: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: 'var(--primary)' }}
-            >
-              <BiPlus size={20} />
+              <BiCartAdd size={20} />
+              Add
             </button>
           </div>
         </div>
       </div>
-    </div>
+
+      {isModalOpen && (
+        <SelectionModal 
+          product={product} 
+          onClose={() => setIsModalOpen(false)} 
+        />
+      )}
+    </>
   );
 };
 

@@ -37,7 +37,14 @@
     "description": "Moist and buttery loaf cake. Add-on flavors available (+RM5): Red Velvet, Orange, Chocoffee, Pandan.",
     "price": 30.00,
     "category": "Buttercake",
-    "image": "/product/classic_buttercake_loaf.jpeg"
+    "image": "/product/classic_buttercake_loaf.jpeg",
+    "options": [
+      { "label": "Original", "extraPrice": 0 },
+      { "label": "Red velvet", "extraPrice": 5 },
+      { "label": "Orange", "extraPrice": 5 },
+      { "label": "Chocoffee", "extraPrice": 5 },
+      { "label": "Pandan", "extraPrice": 5 }
+    ]
   },
   {
     "id": 6,
